@@ -1,0 +1,1 @@
+1.4 线程的中断:线程通过isInterrupted()检查它是否被中断了，然后决定是否响应这个中断请求，可在run方法中处理。eg:PrimeGenerator
