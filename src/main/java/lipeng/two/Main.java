@@ -63,10 +63,13 @@ public class Main {
 
     private static void demo4() {
         EventStorage storage = new EventStorage();
-        Producer producer = new Producer(storage);
-        Thread thread1 = new Thread(producer);
-        thread1.start();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
+            Producer producer = new Producer(storage);
+            Thread thread1 = new Thread(producer);
+            thread1.start();
+        }
+
+        for (int i = 0; i < 2; i++) {
             Consumer consumer = new Consumer(storage);
             Thread thread2 = new Thread(consumer);
             thread2.start();
