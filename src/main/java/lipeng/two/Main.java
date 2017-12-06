@@ -9,7 +9,29 @@ public class Main {
 //        demo1();
 //        demo2();
 //        demo3();
-        demo4();
+//        demo4();
+        demo6();
+//        demo5();
+    }
+
+    private static void demo6() {
+        PricesInfo pricesInfo=new PricesInfo();
+        Reader[] readers=new Reader[5];
+        Thread[] threads=new Thread[5];
+
+
+    }
+
+    private static void demo5() {
+        PrintQueue printQueue = new PrintQueue();
+        Thread[] ts = new Thread[10];
+        for (int i = 0; i < 10; i++) {
+            ts[i] = new Thread(new Job(printQueue), "线程" + i);
+        }
+        for (int i = 0; i < 10; i++) {
+            ts[i].start();
+        }
+
     }
 
     public static void demo1() {
